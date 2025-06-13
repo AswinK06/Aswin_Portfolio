@@ -38,13 +38,13 @@ const Hero = () => {
         </div>
 
         <div className="flex justify-center gap-6 mb-8">
-          <a href="https://github.com" className="text-gray-400 hover:text-white transition-colors">
+          <a href="https://github.com/AswinK06" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
             <Github size={24} />
           </a>
-          <a href="https://linkedin.com" className="text-gray-400 hover:text-white transition-colors">
+          <a href="https://www.linkedin.com/in/aswin-k-6a40ab259" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
             <Linkedin size={24} />
           </a>
-          <a href="mailto:aswinkanan0606@gmail.com" className="text-gray-400 hover:text-white transition-colors">
+          <a href="mailto:aswinkannan0606@gmail.com" className="text-gray-400 hover:text-white transition-colors">
             <Mail size={24} />
           </a>
         </div>

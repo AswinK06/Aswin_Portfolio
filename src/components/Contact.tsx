@@ -27,7 +27,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-gray-400 text-sm">Email</p>
-                  <p className="text-white">aswinkanan0606@gmail.com</p>
+                  <p className="text-white">aswinkannan0606@gmail.com</p>
                 </div>
               </div>
               
@@ -53,10 +53,10 @@ const Contact = () => {
             </div>
             
             <div className="flex gap-4 mt-8">
-              <a href="https://github.com" className="bg-slate-800 p-3 rounded-lg hover:bg-slate-700 transition-colors">
+              <a href="https://github.com/AswinK06" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-3 rounded-lg hover:bg-slate-700 transition-colors">
                 <Github size={20} className="text-white" />
               </a>
-              <a href="https://linkedin.com" className="bg-slate-800 p-3 rounded-lg hover:bg-slate-700 transition-colors">
+              <a href="https://www.linkedin.com/in/aswin-k-6a40ab259" target="_blank" rel="noopener noreferrer" className="bg-slate-800 p-3 rounded-lg hover:bg-slate-700 transition-colors">
                 <Linkedin size={20} className="text-white" />
               </a>
             </div>
