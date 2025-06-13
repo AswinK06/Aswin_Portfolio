@@ -1,0 +1,64 @@
+
+import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+
+const Hero = () => {
+  const scrollToSection = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  return (
+    <section className="min-h-screen flex items-center justify-center relative px-4">
+      <div className="text-center text-white max-w-4xl mx-auto">
+        <div className="mb-8 animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+            Aswin K
+          </h1>
+          <p className="text-xl md:text-2xl text-blue-200 mb-2">Full-Stack Web Developer</p>
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
+            Passionate Web Technology enthusiast with hands-on experience in Web API Testing, 
+            Secure Coding, and Full-Stack Development. Building secure, scalable, and efficient web solutions.
+          </p>
+        </div>
+        
+        <div className="flex justify-center gap-4 mb-8 animate-fade-in">
+          <Button 
+            onClick={() => scrollToSection('projects')}
+            className="bg-blue-600 hover:bg-blue-700 px-8 py-3 text-lg"
+          >
+            View My Work
+          </Button>
+          <Button 
+            onClick={() => scrollToSection('contact')}
+            variant="outline" 
+            className="border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-8 py-3 text-lg"
+          >
+            Get In Touch
+          </Button>
+        </div>
+
+        <div className="flex justify-center gap-6 mb-8">
+          <a href="https://github.com" className="text-gray-400 hover:text-white transition-colors">
+            <Github size={24} />
+          </a>
+          <a href="https://linkedin.com" className="text-gray-400 hover:text-white transition-colors">
+            <Linkedin size={24} />
+          </a>
+          <a href="mailto:aswinkanan0606@gmail.com" className="text-gray-400 hover:text-white transition-colors">
+            <Mail size={24} />
+          </a>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ChevronDown 
+            size={32} 
+            className="text-blue-400 cursor-pointer" 
+            onClick={() => scrollToSection('about')}
+          />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
