@@ -6,7 +6,7 @@ const About = () => {
   const handleResumeDownload = () => {
     // Create a temporary link element to trigger download
     const link = document.createElement('a');
-    link.href = '/lovable-uploads/ab470bd7-0d10-47aa-b20b-738dd468d86a.png'; // Using your uploaded resume image
+    link.href = '/lovable-uploads/f5c7362c-7dc4-4df3-a1ad-142ce42a94a0.png'; // Using your updated resume
     link.download = 'Aswin_K_Resume.png';
     link.target = '_blank';
     document.body.appendChild(link);
@@ -45,17 +45,17 @@ const About = () => {
             <div className="relative">
               <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-cyan-400 to-blue-400 rounded-full"></div>
               <p className="text-lg leading-relaxed pl-6 hover:text-white transition-colors duration-300">
-                I am a passionate Web Technology enthusiast and dedicated Computer Science Engineering student 
-                at K S Rangasamy College of Technology with a strong foundation in modern web technologies. 
-                Currently maintaining an impressive CGPA of 8.43/10.
+                Passionate Web Technology enthusiast with hands-on experience in Web API Testing, 
+                Secure Coding, and Full-Stack Development. Solid Proficient in JavaScript, Java, and React, 
+                with a solid foundation in C, MySQL and Node.js.
               </p>
             </div>
             <div className="relative">
               <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-400 to-teal-400 rounded-full"></div>
               <p className="text-lg leading-relaxed pl-6 hover:text-white transition-colors duration-300">
-                My journey in web development has been marked by hands-on experience in API testing, 
-                secure coding practices, and full-stack development. I specialize in creating innovative 
-                solutions with technologies like React.js, JavaScript, and modern databases.
+                Dedicated to building secure, scalable, and efficient web solutions while continuously 
+                exploring innovative technologies. Currently pursuing Bachelor of Engineering in Computer 
+                Science Engineering at K S Rangasamy College of Technology.
               </p>
             </div>
             <div className="flex flex-wrap gap-4 mt-8 pl-2">
@@ -89,7 +89,7 @@ const About = () => {
               <div className="relative bg-slate-800/40 backdrop-blur-sm p-6 rounded-xl text-center hover:bg-slate-700/40 transition-all duration-300 hover:scale-105 border border-slate-700/50 hover:border-blue-500/50 hover:shadow-2xl">
                 <Database className="text-blue-400 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300" size={40} />
                 <h3 className="text-white font-semibold mb-2 bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent">Database Design</h3>
-                <p className="text-gray-400 text-sm">Optimized database architecture</p>
+                <p className="text-gray-400 text-sm">MySQL & MongoDB expertise</p>
               </div>
             </div>
             <div className="group relative">

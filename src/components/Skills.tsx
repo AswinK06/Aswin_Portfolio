@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { ExternalLink, Award, X, Sparkles, Trophy, Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -26,7 +25,7 @@ const Skills = () => {
       icon: "🗄️"
     },
     {
-      title: "Tools & Version Control",
+      title: "Development & Testing Tools",
       skills: ["Git", "GitHub", "VS Code", "Figma", "Postman"],
       color: "orange",
       icon: "🛠️"
@@ -44,7 +43,7 @@ const Skills = () => {
       score: "Completed Successfully"
     },
     {
-      title: "Introduction to Artificial Intelligence",
+      title: "Introduction to AI",
       provider: "INFOSYS SPRINGBOARD", 
       image: "/lovable-uploads/ab470bd7-0d10-47aa-b20b-738dd468d86a.png",
       description: "Introduction to Artificial Intelligence concepts and applications",
@@ -59,16 +58,16 @@ const Skills = () => {
       description: "Advanced concepts in cybersecurity, privacy protection, and secure systems",
       date: "July-October 2024",
       color: "green",
-      score: "54% (12 week course)"
+      score: "Completed Successfully"
     },
     {
-      title: "Joy of Computing Using Python",
+      title: "A Joy of Computing Using Python",
       provider: "NPTEL",
       image: "/lovable-uploads/555145da-f8fd-4199-956c-d99dcc6d16dc.png",
       description: "Python programming with focus on computational thinking and problem solving",
       date: "July-October 2023",
       color: "green",
-      score: "57% (12 week course)"
+      score: "Completed Successfully"
     },
     {
       title: "Privacy and Security in Online Social Media",
@@ -77,11 +76,11 @@ const Skills = () => {
       description: "Understanding privacy and security challenges in social media platforms",
       date: "January-April 2025",
       color: "green",
-      score: "60% (12 week course)"
+      score: "Completed Successfully"
     },
     {
       title: "Oracle SQL Basics",
-      provider: "COURSERA",
+      provider: "COURSERA(LEARNQUEST)",
       image: "/lovable-uploads/a2fcc6a3-680e-4314-9cea-eda493d0de1d.png",
       description: "Fundamental SQL concepts and database management with Oracle",
       date: "February 2024",

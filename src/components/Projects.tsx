@@ -6,21 +6,21 @@ const Projects = () => {
   const projects = [
     {
       title: "Wanderluxe",
-      description: "Tourism Management System developed using JavaScript & MySQL, streamlining bookings and reducing manual effort by 40%. Features comprehensive booking automation and database optimization.",
+      description: "Developed a Tourism Management System using JavaScript & MySQL, streamlining bookings and reducing manual effort by 40%. Features comprehensive booking automation and database optimization using HTML, CSS, JavaScript, MySQL, and VS Code.",
       tech: ["JavaScript", "MySQL", "HTML", "CSS", "VS Code"],
       type: "Tourism Management System",
       highlights: ["40% efficiency improvement", "Booking automation", "Database optimization", "User-friendly interface"]
     },
     {
       title: "Consultancy Project",
-      description: "Comprehensive temple website project with user-friendly UI/UX design. Features complete login/signup modules, attractive landing page, and employment details section designed using Figma.",
+      description: "Created a user-friendly UI/UX for a temple website, designing login/signup modules, a landing page, and an employment details section using Figma for clean, intuitive design.",
       tech: ["UI/UX Design", "Figma", "Frontend Development", "User Authentication"],
       type: "Temple Management Platform",
       highlights: ["Complete UI/UX design", "User authentication system", "Employment management", "Professional Figma design"]
     },
     {
       title: "Agriseithi",
-      description: "Agricultural web platform built with React.js providing real-time agricultural insights. Integrates APIs for data-driven updates and enhances accessibility for farmers with responsive design.",
+      description: "Built a responsive web platform providing real-time agricultural insights, integrating APIs for data-driven updates using React.js, HTML, CSS, and JavaScript to enhance accessibility for farmers.",
       tech: ["React.js", "JavaScript", "APIs", "HTML", "CSS", "Responsive Design"],
       type: "Agricultural Technology Platform",
       highlights: ["Real-time data integration", "API integration", "Farmer accessibility", "Responsive design", "Data-driven insights"]

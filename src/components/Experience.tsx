@@ -47,7 +47,7 @@ const Experience = () => {
                   </div>
                   
                   <ul className="space-y-2 text-gray-300">
-                    <li>• Engaged in real-time API testing using Postman for the Indainhat project, ensuring seamless data integration and system efficiency</li>
+                    <li>• Engaged in real-time API testing using Postman for the Iraialaihal project, ensuring seamless data integration and system efficiency</li>
                     <li>• Developed and optimized web components, improving functionality and user experience</li>
                     <li>• Collaborated with teams to troubleshoot issues, validate API responses, and enhance overall project reliability</li>
                   </ul>
@@ -71,14 +71,14 @@ const Experience = () => {
                 2022 - Present
               </div>
               <div className="text-cyan-400 font-semibold bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                CGPA: 8.43/10 (Till 5th semester)
+                CGPA: 8.38/10 (Till 5th semester)
               </div>
             </div>
 
             <div className="mt-8">
               <div className="flex items-center gap-3 mb-6">
                 <Star className="text-cyan-400 animate-pulse" size={32} />
-                <h3 className="text-2xl font-semibold text-white bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">Achievements & Certifications</h3>
+                <h3 className="text-2xl font-semibold text-white bg-gradient-to-r from-cyan-400 to-teal-400 bg-clip-text text-transparent">Achievements</h3>
                 <Star className="text-cyan-400 animate-pulse animation-delay-500" size={32} />
               </div>
               <div className="space-y-4">
@@ -119,9 +119,9 @@ const Experience = () => {
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
                           <Award className="text-blue-400" size={20} />
-                          <h4 className="text-blue-400 font-semibold">🏅 Top 227th out of 5000+ Participants</h4>
+                          <h4 className="text-blue-400 font-semibold">🏅 Ranked 227th out of 3000+ Participants</h4>
                         </div>
-                        <p className="text-gray-300 text-sm mb-2">Ranked in Unstop's Engineering February Series - Achieved a competitive standing in a monthly problem-solving challenge</p>
+                        <p className="text-gray-300 text-sm mb-2">Achieved a competitive standing in Unstop's Engineering February Series - a monthly problem-solving challenge</p>
                         <p className="text-teal-400 text-xs font-medium">Certificate of Excellence - February 2025</p>
                       </div>
                     </div>
