@@ -9,28 +9,28 @@ import Contact from '../components/Contact';
 const Index = () => {
   return (
     <div className="min-h-screen relative overflow-hidden">
-      {/* Creative Multi-layered Background - Blue/Teal Theme */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-teal-900"></div>
-      <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-transparent to-blue-500/10"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-blue-400/15 via-transparent to-transparent"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-teal-400/15 via-transparent to-transparent"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-400/10 via-transparent to-transparent"></div>
+      {/* Modern Creative Multi-layered Background - Purple/Orange Theme */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-orange-900"></div>
+      <div className="absolute inset-0 bg-gradient-to-tr from-amber-500/10 via-transparent to-purple-500/10"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-purple-400/15 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-orange-400/15 via-transparent to-transparent"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-amber-400/10 via-transparent to-transparent"></div>
       
       {/* Enhanced Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Main floating orbs */}
-        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
-        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-teal-500 to-blue-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse animation-delay-2000"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse animation-delay-1000"></div>
+        <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-amber-400 to-orange-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse animation-delay-2000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-orange-500 to-red-600 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse animation-delay-1000"></div>
         
         {/* Secondary floating elements */}
-        <div className="absolute top-1/4 right-1/4 w-40 h-40 bg-gradient-to-br from-cyan-400 to-teal-500 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-pulse animation-delay-3000"></div>
-        <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-gradient-to-br from-blue-400 to-cyan-500 rounded-full mix-blend-multiply filter blur-2xl opacity-18 animate-pulse animation-delay-4000"></div>
-        <div className="absolute top-3/4 right-1/3 w-32 h-32 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-full mix-blend-multiply filter blur-2xl opacity-15 animate-pulse animation-delay-500"></div>
+        <div className="absolute top-1/4 right-1/4 w-40 h-40 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-pulse animation-delay-3000"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-48 h-48 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full mix-blend-multiply filter blur-2xl opacity-18 animate-pulse animation-delay-4000"></div>
+        <div className="absolute top-3/4 right-1/3 w-32 h-32 bg-gradient-to-br from-orange-400 to-red-500 rounded-full mix-blend-multiply filter blur-2xl opacity-15 animate-pulse animation-delay-500"></div>
         
         {/* Tertiary accent elements */}
-        <div className="absolute top-1/3 left-1/6 w-24 h-24 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-full mix-blend-multiply filter blur-xl opacity-25 animate-pulse animation-delay-1500"></div>
-        <div className="absolute bottom-1/3 right-1/6 w-28 h-28 bg-gradient-to-br from-blue-400 to-teal-500 rounded-full mix-blend-multiply filter blur-xl opacity-22 animate-pulse animation-delay-2500"></div>
+        <div className="absolute top-1/3 left-1/6 w-24 h-24 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full mix-blend-multiply filter blur-xl opacity-25 animate-pulse animation-delay-1500"></div>
+        <div className="absolute bottom-1/3 right-1/6 w-28 h-28 bg-gradient-to-br from-orange-400 to-amber-500 rounded-full mix-blend-multiply filter blur-xl opacity-22 animate-pulse animation-delay-2500"></div>
       </div>
       
       {/* Enhanced Grid Pattern Overlay with multiple layers */}
@@ -40,18 +40,18 @@ const Index = () => {
       {/* Animated particles with enhanced variety */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Main particles */}
-        <div className="absolute top-10 left-10 w-3 h-3 bg-cyan-400 rounded-full opacity-60 animate-pulse shadow-lg shadow-cyan-400/50"></div>
-        <div className="absolute top-20 right-20 w-2 h-2 bg-teal-400 rounded-full opacity-70 animate-pulse animation-delay-1000 shadow-lg shadow-teal-400/50"></div>
-        <div className="absolute bottom-20 left-20 w-2.5 h-2.5 bg-blue-400 rounded-full opacity-65 animate-pulse animation-delay-2000 shadow-lg shadow-blue-400/50"></div>
-        <div className="absolute bottom-40 right-40 w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-55 animate-pulse animation-delay-3000 shadow-lg shadow-cyan-400/50"></div>
-        <div className="absolute top-1/2 left-10 w-3 h-3 bg-indigo-400 rounded-full opacity-50 animate-pulse animation-delay-4000 shadow-lg shadow-indigo-400/50"></div>
-        <div className="absolute top-1/3 right-10 w-2 h-2 bg-teal-400 rounded-full opacity-60 animate-pulse animation-delay-500 shadow-lg shadow-teal-400/50"></div>
+        <div className="absolute top-10 left-10 w-3 h-3 bg-amber-400 rounded-full opacity-60 animate-pulse shadow-lg shadow-amber-400/50"></div>
+        <div className="absolute top-20 right-20 w-2 h-2 bg-purple-400 rounded-full opacity-70 animate-pulse animation-delay-1000 shadow-lg shadow-purple-400/50"></div>
+        <div className="absolute bottom-20 left-20 w-2.5 h-2.5 bg-orange-400 rounded-full opacity-65 animate-pulse animation-delay-2000 shadow-lg shadow-orange-400/50"></div>
+        <div className="absolute bottom-40 right-40 w-1.5 h-1.5 bg-amber-400 rounded-full opacity-55 animate-pulse animation-delay-3000 shadow-lg shadow-amber-400/50"></div>
+        <div className="absolute top-1/2 left-10 w-3 h-3 bg-pink-400 rounded-full opacity-50 animate-pulse animation-delay-4000 shadow-lg shadow-pink-400/50"></div>
+        <div className="absolute top-1/3 right-10 w-2 h-2 bg-purple-400 rounded-full opacity-60 animate-pulse animation-delay-500 shadow-lg shadow-purple-400/50"></div>
         
         {/* Additional scattered particles */}
-        <div className="absolute top-1/4 left-1/3 w-1 h-1 bg-blue-400 rounded-full opacity-45 animate-pulse animation-delay-1500 shadow-sm shadow-blue-400/50"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-cyan-400 rounded-full opacity-50 animate-pulse animation-delay-2500 shadow-sm shadow-cyan-400/50"></div>
-        <div className="absolute top-2/3 left-1/4 w-1 h-1 bg-teal-400 rounded-full opacity-40 animate-pulse animation-delay-3500 shadow-sm shadow-teal-400/50"></div>
-        <div className="absolute bottom-1/3 left-2/3 w-2 h-2 bg-indigo-400 rounded-full opacity-55 animate-pulse animation-delay-4500 shadow-sm shadow-indigo-400/50"></div>
+        <div className="absolute top-1/4 left-1/3 w-1 h-1 bg-orange-400 rounded-full opacity-45 animate-pulse animation-delay-1500 shadow-sm shadow-orange-400/50"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-1.5 h-1.5 bg-amber-400 rounded-full opacity-50 animate-pulse animation-delay-2500 shadow-sm shadow-amber-400/50"></div>
+        <div className="absolute top-2/3 left-1/4 w-1 h-1 bg-purple-400 rounded-full opacity-40 animate-pulse animation-delay-3500 shadow-sm shadow-purple-400/50"></div>
+        <div className="absolute bottom-1/3 left-2/3 w-2 h-2 bg-pink-400 rounded-full opacity-55 animate-pulse animation-delay-4500 shadow-sm shadow-pink-400/50"></div>
       </div>
       
       {/* Geometric shapes overlay */}
