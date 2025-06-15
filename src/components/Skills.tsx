@@ -87,15 +87,6 @@ const Skills = () => {
       date: "February 2024",
       color: "purple",
       score: "Completed Successfully"
-    },
-    {
-      title: "CHAKRAWAR Technical Combat",
-      provider: "M. Kumarasamy College of Engineering",
-      image: "/lovable-uploads/5cf2bc37-e8e9-4042-bd58-3013c45ed00f.png",
-      description: "Won First Prize in Paper Presentation at National Level Technical Symposium",
-      date: "March 2023",
-      color: "orange",
-      score: "1st Prize Winner"
     }
   ];
 
@@ -109,47 +100,37 @@ const Skills = () => {
     return colors[color as keyof typeof colors];
   };
 
-  const getCertColorClasses = (color: string) => {
-    const colors = {
-      blue: "bg-gradient-to-br from-blue-600 to-blue-800",
-      green: "bg-gradient-to-br from-green-600 to-green-800",
-      purple: "bg-gradient-to-br from-purple-600 to-purple-800",
-      orange: "bg-gradient-to-br from-orange-600 to-orange-800"
-    };
-    return colors[color as keyof typeof colors];
-  };
-
   return (
     <section id="skills" className="py-20 px-4 relative overflow-hidden">
       {/* Enhanced Animated Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 via-blue-900/40 to-purple-900/70"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-blue-900/30 via-transparent to-purple-900/20"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-slate-900/70 via-blue-900/40 to-teal-900/70"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-cyan-900/30 via-transparent to-blue-900/20"></div>
       
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-blue-500/10 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-xl animate-pulse delay-1000"></div>
-      <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-green-500/10 rounded-full blur-xl animate-pulse delay-500"></div>
+      <div className="absolute top-20 left-10 w-32 h-32 bg-cyan-500/10 rounded-full blur-xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-blue-500/10 rounded-full blur-xl animate-pulse delay-1000"></div>
+      <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-teal-500/10 rounded-full blur-xl animate-pulse delay-500"></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <Sparkles className="text-yellow-400 animate-pulse" size={32} />
-            <h2 className="text-4xl md:text-5xl font-bold text-white bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+            <Sparkles className="text-cyan-400 animate-pulse" size={32} />
+            <h2 className="text-4xl md:text-5xl font-bold text-white bg-gradient-to-r from-cyan-400 via-blue-400 to-teal-400 bg-clip-text text-transparent">
               Skills & Technologies
             </h2>
-            <Sparkles className="text-yellow-400 animate-pulse" size={32} />
+            <Sparkles className="text-cyan-400 animate-pulse" size={32} />
           </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-400 mx-auto rounded-full"></div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-20">
           {skillCategories.map((category, index) => (
             <div key={index} className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               <div className="relative bg-slate-800/40 backdrop-blur-sm p-6 rounded-xl border border-slate-700/50 hover:bg-slate-700/40 transition-all duration-300 hover:scale-105 hover:border-slate-600/50 hover:shadow-2xl">
                 <div className="text-center mb-4">
                   <div className="text-4xl mb-2">{category.icon}</div>
-                  <h3 className="text-white font-semibold text-lg bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  <h3 className="text-white font-semibold text-lg bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                     {category.title}
                   </h3>
                 </div>
@@ -170,18 +151,18 @@ const Skills = () => {
 
         <div className="mt-20 text-center">
           <div className="flex items-center justify-center gap-3 mb-8">
-            <Trophy className="text-yellow-400 animate-bounce" size={40} />
-            <h3 className="text-3xl md:text-4xl font-semibold text-white bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent">
+            <Trophy className="text-cyan-400 animate-bounce" size={40} />
+            <h3 className="text-3xl md:text-4xl font-semibold text-white bg-gradient-to-r from-cyan-400 via-blue-400 to-teal-400 bg-clip-text text-transparent">
               Professional Certifications
             </h3>
-            <Trophy className="text-yellow-400 animate-bounce" size={40} />
+            <Trophy className="text-cyan-400 animate-bounce" size={40} />
           </div>
           <div className="flex items-center justify-center gap-2 mb-8">
-            <Star className="text-yellow-400" size={20} />
+            <Star className="text-cyan-400" size={20} />
             <p className="text-gray-300 text-lg max-w-2xl mx-auto">
               Click on any certification to view the complete certificate
             </p>
-            <Star className="text-yellow-400" size={20} />
+            <Star className="text-cyan-400" size={20} />
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -191,7 +172,7 @@ const Skills = () => {
                 className="group relative cursor-pointer"
                 onClick={() => setSelectedCertificate(cert)}
               >
-                <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 to-orange-400/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
                 <div className="relative bg-slate-800/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700/50 hover:bg-slate-700/50 transition-all duration-300 hover:scale-105 hover:border-slate-600/50 hover:shadow-2xl">
                   <div className="relative overflow-hidden rounded-lg mb-4 group-hover:shadow-lg transition-all duration-300">
                     <img 
@@ -201,21 +182,21 @@ const Skills = () => {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
-                  <h4 className="text-white font-semibold mb-2 group-hover:text-blue-400 transition-colors text-lg">
+                  <h4 className="text-white font-semibold mb-2 group-hover:text-cyan-400 transition-colors text-lg">
                     {cert.title}
                   </h4>
-                  <p className="text-blue-400 text-sm mb-2 font-medium">{cert.provider}</p>
+                  <p className="text-cyan-400 text-sm mb-2 font-medium">{cert.provider}</p>
                   <p className="text-gray-300 text-sm mb-3 line-clamp-2">{cert.description}</p>
                   <div className="flex items-center justify-between text-sm">
-                    <span className="text-green-400 font-medium">{cert.score}</span>
+                    <span className="text-blue-400 font-medium">{cert.score}</span>
                     <span className="text-gray-400">{cert.date}</span>
                   </div>
                   <div className="flex items-center justify-between mt-3">
                     <div className="flex items-center gap-1">
-                      <Award size={16} className="text-yellow-400" />
-                      <span className="text-yellow-400 text-xs font-medium">Certified</span>
+                      <Award size={16} className="text-cyan-400" />
+                      <span className="text-cyan-400 text-xs font-medium">Certified</span>
                     </div>
-                    <ExternalLink size={16} className="text-gray-400 group-hover:text-blue-400 transition-colors" />
+                    <ExternalLink size={16} className="text-gray-400 group-hover:text-cyan-400 transition-colors" />
                   </div>
                 </div>
               </div>
@@ -228,13 +209,13 @@ const Skills = () => {
       {selectedCertificate && (
         <div className="fixed inset-0 bg-black/90 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in">
           <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-auto border border-slate-700/50 shadow-2xl">
-            <div className="p-6 border-b border-slate-700 flex items-center justify-between bg-gradient-to-r from-blue-900/30 to-purple-900/30">
+            <div className="p-6 border-b border-slate-700 flex items-center justify-between bg-gradient-to-r from-cyan-900/30 to-blue-900/30">
               <div>
-                <h3 className="text-2xl font-bold text-white bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                <h3 className="text-2xl font-bold text-white bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
                   {selectedCertificate.title}
                 </h3>
-                <p className="text-blue-400 text-lg">{selectedCertificate.provider}</p>
-                <p className="text-green-400 text-sm font-medium">{selectedCertificate.score}</p>
+                <p className="text-cyan-400 text-lg">{selectedCertificate.provider}</p>
+                <p className="text-blue-400 text-sm font-medium">{selectedCertificate.score}</p>
               </div>
               <Button
                 variant="ghost"
@@ -255,7 +236,7 @@ const Skills = () => {
               </div>
               <div className="text-center space-y-2">
                 <p className="text-gray-300 text-lg">{selectedCertificate.description}</p>
-                <p className="text-blue-400 font-medium">Completed: {selectedCertificate.date}</p>
+                <p className="text-cyan-400 font-medium">Completed: {selectedCertificate.date}</p>
               </div>
             </div>
           </div>
