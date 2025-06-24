@@ -11,6 +11,20 @@ const Hero = () => {
     <section className="min-h-screen flex items-center justify-center relative px-4">
       <div className="text-center text-white max-w-4xl mx-auto">
         <div className="mb-8 animate-fade-in">
+          {/* Professional Photo */}
+          <div className="mb-8 flex justify-center">
+            <div className="relative">
+              <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden border-4 border-gradient-to-r from-violet-400 to-purple-400 p-1 bg-gradient-to-r from-violet-400 to-purple-400">
+                <img 
+                  src="/lovable-uploads/0ec66dcd-fc62-4ab8-83ab-98f6cd039a05.png" 
+                  alt="Aswin K - Professional Photo"
+                  className="w-full h-full object-cover rounded-full bg-white"
+                />
+              </div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-violet-400/20 to-purple-400/20 blur-xl"></div>
+            </div>
+          </div>
+          
           <h1 className="text-5xl md:text-7xl font-bold mb-4 bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
             Aswin K
           </h1>
