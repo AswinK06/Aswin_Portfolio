@@ -25,52 +25,46 @@ const Achievements = () => {
 
   return (
     <section id="achievements" className="py-20 px-4 relative overflow-hidden">
-      {/* Enhanced Creative Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900 to-indigo-900"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,_var(--tw-gradient-stops))] from-violet-400/20 via-transparent to-transparent"></div>
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_right,_var(--tw-gradient-stops))] from-purple-400/20 via-transparent to-transparent"></div>
+      {/* Professional Black Background */}
+      <div className="absolute inset-0 bg-black"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900/30 via-transparent to-gray-800/20"></div>
       
-      {/* Floating geometric shapes */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-violet-400/30 to-purple-500/30 rounded-full blur-2xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-purple-400/30 to-indigo-500/30 rounded-full blur-2xl animate-pulse animation-delay-1000"></div>
-      <div className="absolute top-1/2 left-1/4 w-24 h-24 bg-gradient-to-br from-indigo-400/30 to-violet-500/30 rounded-full blur-2xl animate-pulse animation-delay-2000"></div>
-      
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:32px_32px]"></div>
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px]"></div>
       
       <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-6">
-            <Star className="text-violet-400 animate-pulse" size={40} />
-            <h2 className="text-4xl md:text-5xl font-bold text-white bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent">
+            <Star className="text-gray-400" size={40} />
+            <h2 className="text-4xl md:text-5xl font-bold text-white">
               Achievements
             </h2>
-            <Star className="text-violet-400 animate-pulse animation-delay-500" size={40} />
+            <Star className="text-gray-400" size={40} />
           </div>
-          <div className="w-32 h-1 bg-gradient-to-r from-violet-400 to-purple-400 mx-auto rounded-full"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-gray-600 to-gray-400 mx-auto rounded-full"></div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {achievements.map((achievement, index) => (
             <div key={index} className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-violet-400/20 to-purple-400/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <div className="relative bg-gradient-to-br from-slate-800/60 to-slate-900/40 backdrop-blur-sm p-8 rounded-xl border border-slate-700/50 hover:border-violet-400/50 transition-all duration-300 shadow-xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-700/20 to-gray-600/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="relative bg-gradient-to-br from-gray-900/80 to-gray-900/60 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 shadow-xl">
                 <div className="flex items-start gap-6 mb-6">
                   <div className="flex-shrink-0">
-                    <div className="w-20 h-20 bg-gradient-to-br from-violet-500 to-purple-500 rounded-lg border-2 border-violet-400/50 flex items-center justify-center">
-                      <Trophy className="text-white" size={32} />
+                    <div className="w-20 h-20 bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg border-2 border-gray-600/50 flex items-center justify-center">
+                      <Trophy className="text-gray-300" size={32} />
                     </div>
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
-                      <Trophy className="text-violet-400" size={24} />
-                      <h3 className="text-violet-400 font-bold text-xl">{achievement.title}</h3>
+                      <Trophy className="text-gray-400" size={24} />
+                      <h3 className="text-gray-300 font-bold text-xl">{achievement.title}</h3>
                     </div>
                     <h4 className="text-white font-semibold text-lg mb-2">{achievement.subtitle}</h4>
-                    <p className="text-gray-300 text-sm mb-3">{achievement.description}</p>
+                    <p className="text-gray-400 text-sm mb-3">{achievement.description}</p>
                     <div className="flex items-center justify-between">
-                      <p className="text-purple-400 text-sm font-medium">{achievement.provider}</p>
-                      <p className="text-gray-400 text-sm">{achievement.date}</p>
+                      <p className="text-gray-500 text-sm font-medium">{achievement.provider}</p>
+                      <p className="text-gray-500 text-sm">{achievement.date}</p>
                     </div>
                   </div>
                 </div>
@@ -78,20 +72,20 @@ const Achievements = () => {
                 <div className="flex justify-center">
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button variant="outline" size="sm" className="border-violet-400 text-violet-400 hover:bg-violet-400 hover:text-white">
+                      <Button variant="outline" size="sm" className="border-gray-500 text-gray-300 hover:bg-gray-700 hover:text-white">
                         <Eye size={16} className="mr-2" />
                         Preview Certificate
                       </Button>
                     </DialogTrigger>
-                    <DialogContent className="max-w-3xl bg-slate-900 border-violet-500/50">
+                    <DialogContent className="max-w-3xl bg-gray-900 border-gray-600/50">
                       <DialogHeader>
-                        <DialogTitle className="text-violet-400">{achievement.subtitle}</DialogTitle>
+                        <DialogTitle className="text-gray-300">{achievement.subtitle}</DialogTitle>
                       </DialogHeader>
                       <div className="mt-4">
                         <img 
                           src={achievement.image} 
                           alt={`${achievement.subtitle} Certificate`}
-                          className="w-full h-auto rounded-lg border border-violet-500/30"
+                          className="w-full h-auto rounded-lg border border-gray-600/30"
                         />
                       </div>
                     </DialogContent>
