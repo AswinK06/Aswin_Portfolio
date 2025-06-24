@@ -1,9 +1,12 @@
-
+import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
 import About from '../components/About';
 import Skills from '../components/Skills';
+import Certifications from '../components/Certifications';
 import Projects from '../components/Projects';
 import Experience from '../components/Experience';
+import Education from '../components/Education';
+import Achievements from '../components/Achievements';
 import Contact from '../components/Contact';
 
 const Index = () => {
@@ -54,13 +57,19 @@ const Index = () => {
         <div className="absolute top-3/4 right-1/3 w-8 h-8 border border-white/25 rotate-45 animate-pulse animation-delay-2000"></div>
       </div>
       
+      {/* Navigation */}
+      <Navigation />
+      
       {/* Main Content */}
       <div className="relative z-10">
         <Hero />
         <About />
         <Skills />
+        <Certifications />
         <Projects />
         <Experience />
+        <Education />
+        <Achievements />
         <Contact />
       </div>
     </div>
