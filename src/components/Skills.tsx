@@ -79,85 +79,88 @@ const Skills = () => {
   };
 
   return (
-    <section id="skills" className="py-20 px-4 relative overflow-hidden bg-black dark:bg-black light:bg-gradient-to-br light:from-gray-50 light:to-blue-50 transition-colors duration-300">
-      {/* Professional Background */}
-      <div className="absolute inset-0 bg-black dark:bg-black light:bg-transparent"></div>
-      <div className="absolute inset-0 bg-gradient-to-r from-gray-900/30 via-transparent to-gray-800/20 dark:from-gray-900/30 dark:via-transparent dark:to-gray-800/20 light:from-gray-50/20 light:via-transparent light:to-blue-50/20"></div>
-      
-      {/* Subtle grid pattern */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] dark:bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] light:bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)]"></div>
-      
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Sparkles className="text-gray-400 dark:text-gray-400 light:text-blue-600" size={32} />
-            <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900">
-              Skills & Technologies
-            </h2>
-            <Sparkles className="text-gray-400 dark:text-gray-400 light:text-blue-600" size={32} />
-          </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-gray-600 to-gray-400 dark:from-gray-600 dark:to-gray-400 light:from-blue-400 light:to-indigo-400 mx-auto rounded-full"></div>
-        </div>
+    <>
+      <style>
+        {`
+          @keyframes skillProgress {
+            from {
+              width: 0%;
+            }
+            to {
+              width: var(--skill-width);
+            }
+          }
+        `}
+      </style>
+      <section id="skills" className="py-20 px-4 relative overflow-hidden bg-black dark:bg-black light:bg-gradient-to-br light:from-gray-50 light:to-blue-50 transition-colors duration-300">
+        {/* Professional Background */}
+        <div className="absolute inset-0 bg-black dark:bg-black light:bg-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-900/30 via-transparent to-gray-800/20 dark:from-gray-900/30 dark:via-transparent dark:to-gray-800/20 light:from-gray-50/20 light:via-transparent light:to-blue-50/20"></div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
-          {skillCategories.map((category, index) => {
-            const colorClasses = getColorClasses(category.color);
-            const IconComponent = category.icon;
-            
-            return (
-              <div key={index} className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-gray-700/20 to-gray-600/20 dark:from-gray-700/20 dark:to-gray-600/20 light:from-blue-200/20 light:to-indigo-200/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                <div className={`relative ${colorClasses.card} backdrop-blur-sm p-8 rounded-xl border transition-all duration-300 hover:scale-105 hover:shadow-2xl light:shadow-lg`}>
-                  <div className="flex items-center mb-6">
-                    <div className={`w-12 h-12 rounded-lg flex items-center justify-center mr-4 ${colorClasses.progressBg}`}>
-                      <IconComponent size={24} className={colorClasses.text} />
-                    </div>
-                    <h3 className={`text-xl font-semibold ${colorClasses.text}`}>
-                      {category.title}
-                    </h3>
-                  </div>
-                  
-                  <div className="space-y-4">
-                    {category.skills.map((skill, skillIndex) => (
-                      <div key={skillIndex} className="group/skill">
-                        <div className="flex justify-between items-center mb-2">
-                          <span className={`text-sm font-medium ${colorClasses.text}`}>
-                            {skill.name}
-                          </span>
-                          <span className={`text-xs ${colorClasses.text} opacity-75`}>
-                            {skill.level}%
-                          </span>
-                        </div>
-                        <div className={`w-full h-2 rounded-full ${colorClasses.progressBg} overflow-hidden`}>
-                          <div 
-                            className={`h-full rounded-full ${colorClasses.progress} transition-all duration-1000 ease-out transform origin-left group-hover/skill:scale-x-105`}
-                            style={{ 
-                              width: `${skill.level}%`,
-                              animation: `skillProgress 1s ease-out ${skillIndex * 0.1}s both`
-                            }}
-                          ></div>
-                        </div>
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:40px_40px] dark:bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] light:bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)]"></div>
+        
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <Sparkles className="text-gray-400 dark:text-gray-400 light:text-blue-600" size={32} />
+              <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-white light:text-gray-900">
+                Skills & Technologies
+              </h2>
+              <Sparkles className="text-gray-400 dark:text-gray-400 light:text-blue-600" size={32} />
+            </div>
+            <div className="w-24 h-1 bg-gradient-to-r from-gray-600 to-gray-400 dark:from-gray-600 dark:to-gray-400 light:from-blue-400 light:to-indigo-400 mx-auto rounded-full"></div>
+          </div>
+          
+          <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8">
+            {skillCategories.map((category, index) => {
+              const colorClasses = getColorClasses(category.color);
+              const IconComponent = category.icon;
+              
+              return (
+                <div key={index} className="group relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-gray-700/20 to-gray-600/20 dark:from-gray-700/20 dark:to-gray-600/20 light:from-blue-200/20 light:to-indigo-200/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+                  <div className={`relative ${colorClasses.card} backdrop-blur-sm p-8 rounded-xl border transition-all duration-300 hover:scale-105 hover:shadow-2xl light:shadow-lg`}>
+                    <div className="flex items-center mb-6">
+                      <div className={`w-12 h-12 rounded-lg flex items-center justify-center mr-4 ${colorClasses.progressBg}`}>
+                        <IconComponent size={24} className={colorClasses.text} />
                       </div>
-                    ))}
+                      <h3 className={`text-xl font-semibold ${colorClasses.text}`}>
+                        {category.title}
+                      </h3>
+                    </div>
+                    
+                    <div className="space-y-4">
+                      {category.skills.map((skill, skillIndex) => (
+                        <div key={skillIndex} className="group/skill">
+                          <div className="flex justify-between items-center mb-2">
+                            <span className={`text-sm font-medium ${colorClasses.text}`}>
+                              {skill.name}
+                            </span>
+                            <span className={`text-xs ${colorClasses.text} opacity-75`}>
+                              {skill.level}%
+                            </span>
+                          </div>
+                          <div className={`w-full h-2 rounded-full ${colorClasses.progressBg} overflow-hidden`}>
+                            <div 
+                              className={`h-full rounded-full ${colorClasses.progress} transition-all duration-1000 ease-out transform origin-left group-hover/skill:scale-x-105`}
+                              style={{ 
+                                width: `${skill.level}%`,
+                                animation: `skillProgress 1s ease-out ${skillIndex * 0.1}s both`
+                              }}
+                            ></div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
-      </div>
-      
-      <style jsx>{`
-        @keyframes skillProgress {
-          from {
-            width: 0%;
-          }
-          to {
-            width: var(--skill-width);
-          }
-        }
-      `}</style>
-    </section>
+      </section>
+    </>
   );
 };
 
