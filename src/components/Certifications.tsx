@@ -44,6 +44,30 @@ const Certifications = () => {
       date: "February 2025",
       score: "Certificate of Participation",
       image: "/lovable-uploads/af32b548-12f1-42e6-84c8-ec382e1c42e7.png"
+    },
+    {
+      title: "Programming Foundations with JavaScript, HTML and CSS",
+      provider: "Duke University (Coursera)",
+      description: "Comprehensive foundation in web development using JavaScript, HTML, and CSS",
+      date: "2024",
+      score: "Completed Successfully",
+      image: "/lovable-uploads/555145da-f8fd-4199-956c-d99dcc6d16dc.png"
+    },
+    {
+      title: "Java Programming: Solving Problems with Software",
+      provider: "Duke University (Coursera)",
+      description: "Advanced Java programming concepts and problem-solving techniques",
+      date: "2024",
+      score: "Completed Successfully",
+      image: "/lovable-uploads/15ccb1cb-f461-4bd2-a944-eff90ea61f39.png"
+    },
+    {
+      title: "Programming, Data Structures and Algorithms Using Python",
+      provider: "NPTEL",
+      description: "Comprehensive study of programming concepts, data structures, and algorithms using Python",
+      date: "2023",
+      score: "Score: 61%",
+      image: "/lovable-uploads/6e3b40a0-6434-4ddc-9789-2bdd111ac521.png"
     }
   ];
 
@@ -53,8 +77,8 @@ const Certifications = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-purple-100/50 via-indigo-100/30 to-slate-100/50 dark:from-purple-900/50 dark:via-indigo-800/30 dark:to-slate-900/50"></div>
       
       {/* Floating geometric shapes */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-purple-400/20 to-indigo-500/20 rounded-full blur-2xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-indigo-400/20 to-purple-500/20 rounded-full blur-2xl animate-pulse animation-delay-1000"></div>
+      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-purple-300/20 to-indigo-300/20 dark:from-purple-400/20 dark:to-indigo-500/20 rounded-full blur-2xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-indigo-300/20 to-purple-300/20 dark:from-indigo-400/20 dark:to-purple-500/20 rounded-full blur-2xl animate-pulse animation-delay-1000"></div>
       
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:40px_40px]"></div>
@@ -74,7 +98,7 @@ const Certifications = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certifications.map((cert, index) => (
             <div key={index} className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-purple-300/20 to-indigo-300/20 dark:from-purple-600/20 dark:to-indigo-600/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
               <div className="relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-8 rounded-xl border border-purple-200/50 dark:border-purple-500/30 hover:border-purple-400/60 dark:hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
