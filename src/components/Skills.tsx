@@ -48,60 +48,122 @@ const Skills = () => {
     }
   ];
 
+  const getColorClasses = (color: string) => {
+    switch (color) {
+      case 'blue':
+        return {
+          iconBg: 'from-blue-500 to-blue-600',
+          progressBg: 'from-blue-500 to-blue-600',
+          cardBorder: 'border-blue-200/50 dark:border-blue-500/30 hover:border-blue-300 dark:hover:border-blue-400',
+          glowColor: 'from-blue-500/20 to-blue-600/20'
+        };
+      case 'green':
+        return {
+          iconBg: 'from-green-500 to-green-600',
+          progressBg: 'from-green-500 to-green-600',
+          cardBorder: 'border-green-200/50 dark:border-green-500/30 hover:border-green-300 dark:hover:border-green-400',
+          glowColor: 'from-green-500/20 to-green-600/20'
+        };
+      case 'purple':
+        return {
+          iconBg: 'from-purple-500 to-purple-600',
+          progressBg: 'from-purple-500 to-purple-600',
+          cardBorder: 'border-purple-200/50 dark:border-purple-500/30 hover:border-purple-300 dark:hover:border-purple-400',
+          glowColor: 'from-purple-500/20 to-purple-600/20'
+        };
+      case 'orange':
+        return {
+          iconBg: 'from-orange-500 to-orange-600',
+          progressBg: 'from-orange-500 to-orange-600',
+          cardBorder: 'border-orange-200/50 dark:border-orange-500/30 hover:border-orange-300 dark:hover:border-orange-400',
+          glowColor: 'from-orange-500/20 to-orange-600/20'
+        };
+      default:
+        return {
+          iconBg: 'from-gray-500 to-gray-600',
+          progressBg: 'from-gray-500 to-gray-600',
+          cardBorder: 'border-gray-200/50 dark:border-gray-500/30 hover:border-gray-300 dark:hover:border-gray-400',
+          glowColor: 'from-gray-500/20 to-gray-600/20'
+        };
+    }
+  };
+
   return (
-    <section id="skills" className="py-20 px-4 relative overflow-hidden bg-gradient-to-br from-white via-purple-50 to-indigo-100 dark:from-slate-900 dark:via-purple-900 dark:to-indigo-900">
-      {/* Background styling based on theme */}
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-100/30 via-transparent to-indigo-100/30 dark:from-purple-900/30 dark:via-transparent dark:to-indigo-900/30"></div>
+    <section id="skills" className="py-24 px-4 relative overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-900 dark:via-slate-800 dark:to-slate-900">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-gradient-to-r from-blue-400/10 to-purple-400/10 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-l from-indigo-400/10 to-cyan-400/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-violet-400/5 to-pink-400/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      </div>
       
-      {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-violet-400/10 dark:bg-violet-400/10 rounded-full blur-xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-400/10 dark:bg-purple-400/10 rounded-full blur-xl animate-pulse delay-1000"></div>
-      
-      <div className="max-w-6xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <Sparkles className="text-blue-600 dark:text-blue-400" size={40} />
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4 bg-gradient-to-r from-purple-600 via-indigo-600 to-violet-600 dark:from-purple-400 dark:via-indigo-400 dark:to-violet-400 bg-clip-text text-transparent">
+      <div className="max-w-7xl mx-auto relative z-10">
+        {/* Header Section */}
+        <div className="text-center mb-20">
+          <div className="inline-flex items-center justify-center p-3 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 rounded-2xl mb-6">
+            <Sparkles className="text-blue-600 dark:text-blue-400 mr-3" size={32} />
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 dark:from-blue-400 dark:via-purple-400 dark:to-indigo-400 bg-clip-text text-transparent">
               Skills & Technologies
             </h2>
-            <Sparkles className="text-blue-600 dark:text-blue-400" size={40} />
+            <Sparkles className="text-blue-600 dark:text-blue-400 ml-3" size={32} />
           </div>
-          <div className="w-24 h-1 bg-gradient-to-r from-violet-400 to-purple-400 mx-auto rounded-full"></div>
+          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            Comprehensive expertise across modern development technologies and tools
+          </p>
+          <div className="w-32 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 mx-auto rounded-full mt-6"></div>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Skills Grid */}
+        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {skillCategories.map((category, index) => {
             const IconComponent = category.icon;
+            const colorClasses = getColorClasses(category.color);
             
             return (
               <div key={index} className="group relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-purple-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-                <div className="relative bg-white/80 dark:bg-slate-800/60 backdrop-blur-sm p-8 rounded-xl border border-purple-200/50 dark:border-purple-500/30 hover:border-violet-400/50 dark:hover:border-violet-400/50 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl">
-                  <div className="flex items-center mb-6">
-                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-purple-500 rounded-lg flex items-center justify-center mr-4">
-                      <IconComponent size={24} className="text-white" />
+                {/* Glow effect */}
+                <div className={`absolute inset-0 bg-gradient-to-r ${colorClasses.glowColor} rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500 scale-105`}></div>
+                
+                {/* Main card */}
+                <div className={`relative bg-white/70 dark:bg-slate-800/70 backdrop-blur-lg p-8 rounded-2xl border-2 ${colorClasses.cardBorder} transition-all duration-300 hover:scale-[1.02] hover:shadow-2xl group-hover:shadow-3xl`}>
+                  {/* Card header */}
+                  <div className="flex items-center mb-8">
+                    <div className={`w-16 h-16 bg-gradient-to-br ${colorClasses.iconBg} rounded-xl flex items-center justify-center mr-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                      <IconComponent size={28} className="text-white" />
                     </div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                      {category.title}
-                    </h3>
+                    <div>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+                        {category.title}
+                      </h3>
+                      <div className={`w-12 h-1 bg-gradient-to-r ${colorClasses.progressBg} rounded-full`}></div>
+                    </div>
                   </div>
                   
-                  <div className="space-y-4">
+                  {/* Skills list */}
+                  <div className="space-y-6">
                     {category.skills.map((skill, skillIndex) => (
                       <div key={skillIndex} className="group/skill">
-                        <div className="flex justify-between items-center mb-2">
-                          <span className="text-sm font-medium text-gray-800 dark:text-gray-300">
+                        <div className="flex justify-between items-center mb-3">
+                          <span className="text-base font-semibold text-gray-800 dark:text-gray-200 group-hover/skill:text-gray-900 dark:group-hover/skill:text-white transition-colors">
                             {skill.name}
                           </span>
-                          <span className="text-xs text-blue-600 dark:text-blue-400 opacity-75">
-                            {skill.level}%
-                          </span>
+                          <div className="flex items-center gap-2">
+                            <span className="text-sm font-bold text-gray-600 dark:text-gray-400">
+                              {skill.level}%
+                            </span>
+                            <div className="w-2 h-2 rounded-full bg-current opacity-50"></div>
+                          </div>
                         </div>
-                        <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
-                          <div 
-                            className="h-full bg-gradient-to-r from-blue-500 to-purple-500 rounded-full transition-all duration-1000 ease-out"
-                            style={{ width: `${skill.level}%` }}
-                          ></div>
+                        <div className="relative">
+                          <div className="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden shadow-inner">
+                            <div 
+                              className={`h-full bg-gradient-to-r ${colorClasses.progressBg} rounded-full transition-all duration-1000 ease-out relative overflow-hidden`}
+                              style={{ width: `${skill.level}%` }}
+                            >
+                              {/* Animated shine effect */}
+                              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 animate-pulse"></div>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     ))}
