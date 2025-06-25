@@ -54,30 +54,6 @@ const Certifications = () => {
       image: "/lovable-uploads/2731a8e6-0d07-43f5-9f68-79100329d60d.png"
     },
     {
-      title: "Programming Foundations with JavaScript, HTML and CSS",
-      provider: "Duke University (Coursera)",
-      description: "Comprehensive foundation in web development using JavaScript, HTML, and CSS",
-      date: "2024",
-      score: "Completed Successfully",
-      image: "/lovable-uploads/555145da-f8fd-4199-956c-d99dcc6d16dc.png"
-    },
-    {
-      title: "Java Programming: Solving Problems with Software",
-      provider: "Duke University (Coursera)",
-      description: "Advanced Java programming concepts and problem-solving techniques",
-      date: "2024",
-      score: "Completed Successfully",
-      image: "/lovable-uploads/15ccb1cb-f461-4bd2-a944-eff90ea61f39.png"
-    },
-    {
-      title: "Programming, Data Structures and Algorithms Using Python",
-      provider: "NPTEL",
-      description: "Comprehensive study of programming concepts, data structures, and algorithms using Python",
-      date: "2023",
-      score: "Score: 61%",
-      image: "/lovable-uploads/6e3b40a0-6434-4ddc-9789-2bdd111ac521.png"
-    },
-    {
       title: "Basics of Python",
       provider: "INFOSYS SPRINGBOARD",
       description: "Fundamental Python programming concepts and practical applications",
@@ -104,23 +80,31 @@ const Certifications = () => {
   ];
 
   return (
-    <section id="certifications" className="py-20 px-4 bg-gray-50 dark:bg-gray-800">
-      <div className="max-w-6xl mx-auto">
+    <section id="certifications" className="py-20 px-4 relative overflow-hidden bg-gradient-to-br from-white via-purple-50 to-indigo-100 dark:from-slate-900 dark:via-purple-900 dark:to-indigo-900">
+      {/* Background styling based on theme */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-100/30 via-transparent to-indigo-100/30 dark:from-purple-900/30 dark:via-transparent dark:to-indigo-900/30"></div>
+      
+      {/* Floating Elements */}
+      <div className="absolute top-20 left-10 w-32 h-32 bg-violet-400/10 dark:bg-violet-400/10 rounded-full blur-xl animate-pulse"></div>
+      <div className="absolute bottom-20 right-10 w-40 h-40 bg-purple-400/10 dark:bg-purple-400/10 rounded-full blur-xl animate-pulse delay-1000"></div>
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-8">
             <Trophy className="text-blue-600 dark:text-blue-400" size={40} />
-            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
+            <h3 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white mb-4 bg-gradient-to-r from-purple-600 via-indigo-600 to-violet-600 dark:from-purple-400 dark:via-indigo-400 dark:to-violet-400 bg-clip-text text-transparent">
               Professional Certifications
             </h3>
             <Trophy className="text-blue-600 dark:text-blue-400" size={40} />
           </div>
-          <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-violet-400 to-purple-400 mx-auto rounded-full"></div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certifications.map((cert, index) => (
             <div key={index} className="group relative">
-              <div className="bg-white dark:bg-gray-900 p-8 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-violet-500/20 to-purple-500/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
+              <div className="relative bg-white/80 dark:bg-slate-800/60 backdrop-blur-sm p-8 rounded-xl border border-purple-200/50 dark:border-purple-500/30 hover:border-violet-400/50 dark:hover:border-violet-400/50 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-2xl">
                 <div className="text-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Award size={32} className="text-white" />
