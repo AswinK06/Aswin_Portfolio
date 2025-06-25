@@ -6,10 +6,10 @@ const Skills = () => {
     {
       title: "Programming Languages",
       skills: [
-        { name: "C", level: 85 },
-        { name: "Python", level: 90 },
-        { name: "Java", level: 80 },
-        { name: "JavaScript", level: 85 }
+        { name: "C", level: 85, proficiency: "Advanced" },
+        { name: "Python", level: 90, proficiency: "Expert" },
+        { name: "Java", level: 80, proficiency: "Advanced" },
+        { name: "JavaScript", level: 85, proficiency: "Advanced" }
       ],
       color: "blue",
       icon: Code
@@ -17,10 +17,10 @@ const Skills = () => {
     {
       title: "Web Technologies",
       skills: [
-        { name: "HTML", level: 95 },
-        { name: "CSS", level: 90 },
-        { name: "React.js", level: 85 },
-        { name: "Bootstrap", level: 80 }
+        { name: "HTML", level: 95, proficiency: "Expert" },
+        { name: "CSS", level: 90, proficiency: "Expert" },
+        { name: "React.js", level: 85, proficiency: "Advanced" },
+        { name: "Bootstrap", level: 80, proficiency: "Advanced" }
       ],
       color: "green",
       icon: Globe
@@ -28,8 +28,8 @@ const Skills = () => {
     {
       title: "Databases", 
       skills: [
-        { name: "MySQL", level: 85 },
-        { name: "MongoDB", level: 75 }
+        { name: "MySQL", level: 85, proficiency: "Advanced" },
+        { name: "MongoDB", level: 75, proficiency: "Intermediate" }
       ],
       color: "purple",
       icon: Database
@@ -37,11 +37,11 @@ const Skills = () => {
     {
       title: "Development & Testing Tools",
       skills: [
-        { name: "Git", level: 85 },
-        { name: "GitHub", level: 90 },
-        { name: "VS Code", level: 95 },
-        { name: "Figma", level: 75 },
-        { name: "Postman", level: 80 }
+        { name: "Git", level: 85, proficiency: "Advanced" },
+        { name: "GitHub", level: 90, proficiency: "Expert" },
+        { name: "VS Code", level: 95, proficiency: "Expert" },
+        { name: "Figma", level: 75, proficiency: "Intermediate" },
+        { name: "Postman", level: 80, proficiency: "Advanced" }
       ],
       color: "orange",
       icon: Settings
@@ -55,35 +55,40 @@ const Skills = () => {
           iconBg: 'from-blue-500 to-blue-600',
           progressBg: 'from-blue-500 to-blue-600',
           cardBorder: 'border-blue-200/50 dark:border-blue-500/30 hover:border-blue-300 dark:hover:border-blue-400',
-          glowColor: 'from-blue-500/20 to-blue-600/20'
+          glowColor: 'from-blue-500/20 to-blue-600/20',
+          badgeBg: 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300'
         };
       case 'green':
         return {
           iconBg: 'from-green-500 to-green-600',
           progressBg: 'from-green-500 to-green-600',
           cardBorder: 'border-green-200/50 dark:border-green-500/30 hover:border-green-300 dark:hover:border-green-400',
-          glowColor: 'from-green-500/20 to-green-600/20'
+          glowColor: 'from-green-500/20 to-green-600/20',
+          badgeBg: 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300'
         };
       case 'purple':
         return {
           iconBg: 'from-purple-500 to-purple-600',
           progressBg: 'from-purple-500 to-purple-600',
           cardBorder: 'border-purple-200/50 dark:border-purple-500/30 hover:border-purple-300 dark:hover:border-purple-400',
-          glowColor: 'from-purple-500/20 to-purple-600/20'
+          glowColor: 'from-purple-500/20 to-purple-600/20',
+          badgeBg: 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300'
         };
       case 'orange':
         return {
           iconBg: 'from-orange-500 to-orange-600',
           progressBg: 'from-orange-500 to-orange-600',
           cardBorder: 'border-orange-200/50 dark:border-orange-500/30 hover:border-orange-300 dark:hover:border-orange-400',
-          glowColor: 'from-orange-500/20 to-orange-600/20'
+          glowColor: 'from-orange-500/20 to-orange-600/20',
+          badgeBg: 'bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300'
         };
       default:
         return {
           iconBg: 'from-gray-500 to-gray-600',
           progressBg: 'from-gray-500 to-gray-600',
           cardBorder: 'border-gray-200/50 dark:border-gray-500/30 hover:border-gray-300 dark:hover:border-gray-400',
-          glowColor: 'from-gray-500/20 to-gray-600/20'
+          glowColor: 'from-gray-500/20 to-gray-600/20',
+          badgeBg: 'bg-gray-100 dark:bg-gray-900/30 text-gray-700 dark:text-gray-300'
         };
     }
   };
@@ -147,15 +152,12 @@ const Skills = () => {
                           <span className="text-base font-semibold text-gray-800 dark:text-gray-200 group-hover/skill:text-gray-900 dark:group-hover/skill:text-white transition-colors">
                             {skill.name}
                           </span>
-                          <div className="flex items-center gap-2">
-                            <span className="text-sm font-bold text-gray-600 dark:text-gray-400">
-                              {skill.level}%
-                            </span>
-                            <div className="w-2 h-2 rounded-full bg-current opacity-50"></div>
-                          </div>
+                          <span className={`px-3 py-1 rounded-full text-xs font-medium ${colorClasses.badgeBg} border border-current border-opacity-20`}>
+                            {skill.proficiency}
+                          </span>
                         </div>
                         <div className="relative">
-                          <div className="w-full h-3 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden shadow-inner">
+                          <div className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden shadow-inner">
                             <div 
                               className={`h-full bg-gradient-to-r ${colorClasses.progressBg} rounded-full transition-all duration-1000 ease-out relative overflow-hidden`}
                               style={{ width: `${skill.level}%` }}
