@@ -11,7 +11,7 @@ const Certifications = () => {
       description: "Advanced concepts in cybersecurity, privacy protection, and secure systems",
       date: "July-October 2024",
       score: "Score: 54%",
-      image: "/lovable-uploads/c1672d83-4cdd-4e99-8bae-1791469cb436.png"
+      image: "/lovable-uploads/3f8e1dde-da90-493b-b0ac-19625aae240f.png"
     },
     {
       title: "Privacy and Security in Online Social Media",
@@ -19,7 +19,7 @@ const Certifications = () => {
       description: "Understanding privacy and security challenges in social media platforms",
       date: "January-April 2025",
       score: "Score: 60%",
-      image: "/lovable-uploads/cd1ff767-a827-44d3-8457-9ae7dc466476.png"
+      image: "/lovable-uploads/79344da7-973e-4d3c-8af9-316706607608.png"
     },
     {
       title: "A Joy of Computing Using Python",
@@ -27,7 +27,15 @@ const Certifications = () => {
       description: "Python programming with focus on computational thinking and problem solving",
       date: "July-October 2023",
       score: "Score: 57%",
-      image: "/lovable-uploads/f43a33c6-3dea-4f84-be69-93d99aa38281.png"
+      image: "/lovable-uploads/7657955f-dd30-4c56-a68f-4057734f8762.png"
+    },
+    {
+      title: "Introduction to Artificial Intelligence (AI)",
+      provider: "IBM (Coursera)",
+      description: "Comprehensive introduction to artificial intelligence concepts and applications",
+      date: "March 2024",
+      score: "Completed Successfully",
+      image: "/lovable-uploads/08155e08-c3cd-4291-9e4c-94bb9c72bed9.png"
     },
     {
       title: "Oracle SQL Basics",
@@ -35,7 +43,7 @@ const Certifications = () => {
       description: "Fundamental SQL concepts and database management with Oracle",
       date: "February 2024",
       score: "Completed Successfully",
-      image: "/lovable-uploads/11f38f92-3582-465a-a52c-e83f230b83ec.png"
+      image: "/lovable-uploads/adce0369-aa69-4691-9b48-43eac96594d0.png"
     },
     {
       title: "Cyber Kushti: Hackathon Participation",
@@ -43,7 +51,7 @@ const Certifications = () => {
       description: "Successfully participated in the Cyber Kushti cybersecurity hackathon",
       date: "February 2025",
       score: "Certificate of Participation",
-      image: "/lovable-uploads/af32b548-12f1-42e6-84c8-ec382e1c42e7.png"
+      image: "/lovable-uploads/2731a8e6-0d07-43f5-9f68-79100329d60d.png"
     },
     {
       title: "Programming Foundations with JavaScript, HTML and CSS",
@@ -68,74 +76,87 @@ const Certifications = () => {
       date: "2023",
       score: "Score: 61%",
       image: "/lovable-uploads/6e3b40a0-6434-4ddc-9789-2bdd111ac521.png"
+    },
+    {
+      title: "Basics of Python",
+      provider: "INFOSYS SPRINGBOARD",
+      description: "Fundamental Python programming concepts and practical applications",
+      date: "September 2024",
+      score: "Completed Successfully",
+      image: "/lovable-uploads/0316cbdc-df07-4974-8b7d-dd89854c933f.png"
+    },
+    {
+      title: "Java Programming Fundamentals",
+      provider: "INFOSYS SPRINGBOARD",
+      description: "Core Java programming concepts and object-oriented programming principles",
+      date: "November 2024",
+      score: "Completed Successfully",
+      image: "/lovable-uploads/10e6747b-43a3-473f-926f-2e4b05a7b833.png"
+    },
+    {
+      title: "Prompt Engineering",
+      provider: "INFOSYS SPRINGBOARD",
+      description: "Advanced techniques for effective AI prompt design and optimization",
+      date: "November 2024",
+      score: "Completed Successfully",
+      image: "/lovable-uploads/276ad3a8-50c6-442b-97c0-216181c848b2.png"
     }
   ];
 
   return (
-    <section id="certifications" className="py-20 px-4 relative overflow-hidden bg-gradient-to-br from-white via-purple-50 to-indigo-100 dark:from-purple-900 dark:via-indigo-900 dark:to-slate-900">
-      {/* Enhanced background effects */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-100/50 via-indigo-100/30 to-slate-100/50 dark:from-purple-900/50 dark:via-indigo-800/30 dark:to-slate-900/50"></div>
-      
-      {/* Floating geometric shapes */}
-      <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-purple-300/20 to-indigo-300/20 dark:from-purple-400/20 dark:to-indigo-500/20 rounded-full blur-2xl animate-pulse"></div>
-      <div className="absolute bottom-20 right-10 w-40 h-40 bg-gradient-to-br from-indigo-300/20 to-purple-300/20 dark:from-indigo-400/20 dark:to-purple-500/20 rounded-full blur-2xl animate-pulse animation-delay-1000"></div>
-      
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-      
-      <div className="max-w-6xl mx-auto relative z-10">
+    <section id="certifications" className="py-20 px-4 bg-gray-50 dark:bg-gray-800">
+      <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-3 mb-8">
-            <Trophy className="text-purple-600 dark:text-purple-400" size={40} />
-            <h3 className="text-4xl md:text-5xl font-bold text-gray-800 dark:text-white bg-gradient-to-r from-purple-600 via-indigo-600 to-violet-600 dark:from-purple-400 dark:via-indigo-400 dark:to-violet-400 bg-clip-text text-transparent">
+            <Trophy className="text-blue-600 dark:text-blue-400" size={40} />
+            <h3 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">
               Professional Certifications
             </h3>
-            <Trophy className="text-purple-600 dark:text-purple-400" size={40} />
+            <Trophy className="text-blue-600 dark:text-blue-400" size={40} />
           </div>
-          <div className="w-32 h-1 bg-gradient-to-r from-purple-400 to-indigo-400 mx-auto rounded-full"></div>
+          <div className="w-32 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certifications.map((cert, index) => (
             <div key={index} className="group relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-purple-300/20 to-indigo-300/20 dark:from-purple-600/20 dark:to-indigo-600/20 rounded-xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
-              <div className="relative bg-white/80 dark:bg-slate-800/80 backdrop-blur-sm p-8 rounded-xl border border-purple-200/50 dark:border-purple-500/30 hover:border-purple-400/60 dark:hover:border-purple-400/60 transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+              <div className="bg-white dark:bg-gray-900 p-8 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-500 transition-all duration-300 hover:scale-105 hover:shadow-xl">
                 <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
                     <Award size={32} className="text-white" />
                   </div>
-                  <h4 className="text-gray-800 dark:text-white font-semibold mb-2 group-hover:text-purple-600 dark:group-hover:text-purple-300 transition-colors text-lg">
+                  <h4 className="text-gray-800 dark:text-white font-semibold mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors text-lg">
                     {cert.title}
                   </h4>
-                  <p className="text-purple-600 dark:text-purple-300 text-sm mb-2 font-medium">{cert.provider}</p>
+                  <p className="text-blue-600 dark:text-blue-300 text-sm mb-2 font-medium">{cert.provider}</p>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 text-sm mb-4 line-clamp-3">{cert.description}</p>
                 <div className="flex items-center justify-between text-sm mb-4">
-                  <span className="text-purple-600 dark:text-purple-200 font-medium">{cert.score}</span>
+                  <span className="text-blue-600 dark:text-blue-200 font-medium">{cert.score}</span>
                   <span className="text-gray-500 dark:text-gray-400">{cert.date}</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2 bg-purple-100/80 dark:bg-purple-800/30 px-4 py-2 rounded-full border border-purple-300/50 dark:border-purple-600/30">
-                    <Award size={16} className="text-purple-600 dark:text-purple-400" />
-                    <span className="text-purple-700 dark:text-purple-300 text-xs font-medium">Certified</span>
+                  <div className="flex items-center gap-2 bg-blue-100 dark:bg-blue-800 px-4 py-2 rounded-full border border-blue-300 dark:border-blue-600">
+                    <Award size={16} className="text-blue-600 dark:text-blue-400" />
+                    <span className="text-blue-700 dark:text-blue-300 text-xs font-medium">Certified</span>
                   </div>
                   
                   <Dialog>
                     <DialogTrigger asChild>
-                      <Button variant="outline" size="sm" className="border-purple-500 text-purple-600 dark:text-purple-300 hover:bg-purple-600 hover:text-white">
+                      <Button variant="outline" size="sm" className="border-blue-500 text-blue-600 dark:text-blue-300 hover:bg-blue-600 hover:text-white">
                         <Eye size={16} className="mr-2" />
                         Preview
                       </Button>
                     </DialogTrigger>
-                    <DialogContent className="max-w-3xl bg-white dark:bg-slate-900 border-purple-300/50 dark:border-purple-600/50">
+                    <DialogContent className="max-w-3xl bg-white dark:bg-gray-900 border-blue-300 dark:border-blue-600">
                       <DialogHeader>
-                        <DialogTitle className="text-gray-800 dark:text-purple-300">{cert.title}</DialogTitle>
+                        <DialogTitle className="text-gray-800 dark:text-blue-300">{cert.title}</DialogTitle>
                       </DialogHeader>
                       <div className="mt-4">
                         <img 
                           src={cert.image} 
                           alt={`${cert.title} Certificate`}
-                          className="w-full h-auto rounded-lg border border-purple-300/30 dark:border-purple-600/30"
+                          className="w-full h-auto rounded-lg border border-blue-300 dark:border-blue-600"
                         />
                       </div>
                     </DialogContent>
