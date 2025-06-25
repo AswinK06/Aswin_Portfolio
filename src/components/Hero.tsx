@@ -1,17 +1,49 @@
 
 import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { useEffect, useState } from 'react';
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
-  const roles = [
-    "Full-Stack Web Developer",
-    "MERN Stack Developer", 
-    "LeetCode Problem Solver"
+  // Typing animation state
+  const [currentText, setCurrentText] = useState('');
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isTyping, setIsTyping] = useState(true);
+  
+  const typingTexts = [
+    "MERN Stack Developer",
+    "AI/ML Intern @ EduSkills & Google",
+    "LeetCode Problem Solver",
+    "Web App Designer",
+    "Tech Symposium Winner",
+    "Future Software Engineer 🚀"
   ];
+
+  useEffect(() => {
+    const currentString = typingTexts[currentIndex];
+    
+    const timeout = setTimeout(() => {
+      if (isTyping) {
+        if (currentText.length < currentString.length) {
+          setCurrentText(currentString.slice(0, currentText.length + 1));
+        } else {
+          setTimeout(() => setIsTyping(false), 2000); // Wait 2s before backspacing
+        }
+      } else {
+        if (currentText.length > 0) {
+          setCurrentText(currentText.slice(0, -1));
+        } else {
+          setCurrentIndex((prev) => (prev + 1) % typingTexts.length);
+          setIsTyping(true);
+        }
+      }
+    }, isTyping ? 100 : 50); // Typing speed vs backspacing speed
+
+    return () => clearTimeout(timeout);
+  }, [currentText, currentIndex, isTyping, typingTexts]);
 
   return (
     <section className="pt-24 pb-16 min-h-screen flex items-center justify-center relative px-4 bg-gradient-to-br from-purple-900 via-slate-900 to-gray-900 dark:bg-gradient-to-br dark:from-purple-900 dark:via-slate-900 dark:to-gray-900 light:bg-gradient-to-br light:from-white light:via-purple-50 light:to-indigo-100 transition-colors duration-300">
@@ -41,16 +73,11 @@ const Hero = () => {
             Aswin K
           </h1>
           
-          {/* Animated Role Text */}
-          <div className="mb-4 h-16 flex items-center justify-center">
-            <div className="overflow-hidden">
-              <div className="animate-[slideUp_6s_infinite] flex flex-col">
-                {roles.map((role, index) => (
-                  <p key={index} className="text-xl md:text-2xl text-purple-200 light:text-purple-700 font-semibold h-16 flex items-center justify-center">
-                    {role}
-                  </p>
-                ))}
-              </div>
+          {/* Typing Animation */}
+          <div className="mb-6 h-16 flex items-center justify-center">
+            <div className="text-xl md:text-2xl text-cyan-400 light:text-blue-600 font-semibold">
+              <span>{currentText}</span>
+              <span className="animate-pulse text-cyan-300 light:text-blue-500">|</span>
             </div>
           </div>
           
