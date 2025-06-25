@@ -14,18 +14,19 @@ import Contact from '../components/Contact';
 const Index = () => {
   return (
     <ThemeProvider>
-      <div className="min-h-screen relative overflow-hidden bg-black dark:bg-black light:bg-white transition-colors duration-300">
-        {/* Professional Background */}
-        <div className="absolute inset-0 bg-black dark:bg-black light:bg-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 via-transparent to-gray-800/10 dark:from-gray-900/20 dark:via-transparent dark:to-gray-800/10 light:from-blue-50/20 light:via-transparent light:to-indigo-50/10"></div>
+      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-purple-900 via-slate-900 to-gray-900 dark:bg-gradient-to-br dark:from-purple-900 dark:via-slate-900 dark:to-gray-900 light:bg-gradient-to-br light:from-slate-900 light:via-indigo-900 light:to-purple-900 transition-colors duration-300">
+        {/* Dark theme background with purple-slate gradient */}
+        <div className="absolute inset-0 dark:bg-gradient-to-br dark:from-purple-900 dark:via-slate-900 dark:to-gray-900 light:bg-gradient-to-br light:from-slate-900 light:via-indigo-900 light:to-purple-900"></div>
+        <div className="absolute inset-0 dark:bg-gradient-to-br dark:from-gray-900/20 dark:via-transparent dark:to-gray-800/10 light:bg-gradient-to-br light:from-indigo-900/20 light:via-transparent light:to-purple-800/10"></div>
         
         {/* Subtle grid pattern overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] bg-[size:50px_50px] dark:bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] light:bg-[linear-gradient(to_right,#00000008_1px,transparent_1px),linear-gradient(to_bottom,#00000008_1px,transparent_1px)]"></div>
+        <div className="absolute inset-0 dark:bg-[linear-gradient(to_right,#ffffff03_1px,transparent_1px),linear-gradient(to_bottom,#ffffff03_1px,transparent_1px)] dark:bg-[size:50px_50px] light:bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] light:bg-[size:50px_50px]"></div>
         
-        {/* Minimal floating elements for depth */}
+        {/* Enhanced floating elements for depth */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute -top-40 -right-40 w-96 h-96 bg-gray-800/20 dark:bg-gray-800/20 light:bg-blue-200/10 rounded-full mix-blend-multiply filter blur-3xl"></div>
-          <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gray-700/20 dark:bg-gray-700/20 light:bg-indigo-200/10 rounded-full mix-blend-multiply filter blur-3xl"></div>
+          <div className="absolute -top-40 -right-40 w-96 h-96 dark:bg-purple-800/20 light:bg-indigo-800/20 rounded-full mix-blend-multiply filter blur-3xl"></div>
+          <div className="absolute -bottom-40 -left-40 w-96 h-96 dark:bg-slate-700/20 light:bg-purple-700/20 rounded-full mix-blend-multiply filter blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 h-80 dark:bg-violet-800/10 light:bg-indigo-700/10 rounded-full mix-blend-multiply filter blur-3xl"></div>
         </div>
         
         {/* Navigation */}
